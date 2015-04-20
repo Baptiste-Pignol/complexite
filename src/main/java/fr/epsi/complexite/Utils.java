@@ -29,6 +29,7 @@ public class Utils {
             }
         }
         res.fromList(finalList);
+        res.evaluate();
         return res;
     }
 

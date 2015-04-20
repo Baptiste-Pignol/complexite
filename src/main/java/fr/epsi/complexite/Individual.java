@@ -30,6 +30,7 @@ public class Individual {
         this.counterWeightMass = counterWeightMass;
         this.projectileMass = projectileMass;
         this.baseWidth = baseWidth;
+        this.evaluate();
     }
 
     /**
@@ -69,6 +70,10 @@ public class Individual {
         return (0.5) * projectileMass * Math.pow(getVelocite(), 2);
     }
 
+    private double getTNTEnergie() {
+        return  (getEnergie() / 4184);
+    }
+
     public double evaluate() {
 
         if (this.value == -1) {
@@ -78,7 +83,7 @@ public class Individual {
             }
 
             res -= Math.abs(GOAL - this.getPortee()) * 100;
-            res += getEnergie();
+            res += getTNTEnergie();
             this.value = res;
         }
         return this.value;

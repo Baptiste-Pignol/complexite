@@ -12,7 +12,7 @@ public class App {
 
         Set<Individual> population = new HashSet<Individual>();
 
-        for (int val = 0; val < 1000; val++) {
+        for (int val = 0; val < 10000; val++) {
             population.add(new Individual(
                     Math.random() * 180,
                     Math.random() * 30 + 0.5,
@@ -25,10 +25,13 @@ public class App {
         }
         System.out.println("starting iteration");
         int count = 0;
+        Set<Individual> newPopulation = new HashSet<Individual>();
         while (population.size() > 1) {
             System.out.println("\titeration: " + ++count);
-            population = Utils.iterate(population);
-            System.out.println(population);
+            newPopulation.clear();
+            newPopulation.addAll(Utils.iterate(population));
+            population.clear();
+            population.addAll(newPopulation);
         }
         System.out.println("ending iteration, final pop:" + population);
     }
