@@ -71,7 +71,7 @@ public class Individual {
     }
 
     private double getTNTEnergie() {
-        return  (getEnergie() / 4184);
+        return (getEnergie() / 4184);
     }
 
     public double evaluate() {
