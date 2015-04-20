@@ -83,7 +83,7 @@ public class Individual {
             }
 
             res -= Math.abs(GOAL - this.getPortee()) * 100;
-            res += getTNTEnergie();
+            res += getTNTEnergie() * 1;
             this.value = res;
         }
         if (this.value < 0)
