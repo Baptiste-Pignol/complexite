@@ -19,8 +19,7 @@ public class GeneticAlgorithm {
 
         population = new ArrayList<Individual>();
 
-        for (int val = 0; val < 1000; val++) {
-            // TODO Generify params
+        for (int val = 0; val < parameter.getIndividualCount(); val++) {
             population.add(new Individual(
                     Math.random() * parameter.getAlphaAngleMax() + parameter.getAlphaAngleMin(),
                     Math.random() * parameter.getArmLengthMax() + parameter.getArmLengthMin(),
@@ -125,6 +124,9 @@ public class GeneticAlgorithm {
      * @return
      */
     public Individual yield() {
+        if (population.size() == 1) {
+            return null;
+        }
         population = this.iterate(population);
         return population.get(0);
     }

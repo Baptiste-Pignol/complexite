@@ -10,6 +10,28 @@ public class Parameter {
     private int individualCount;
 
     public Parameter() {
+        alphaAngleMin = 0;
+        alphaAngleMax = 180;
+
+        armLengthMin = 0.5;
+        armLengthMax = 30;
+
+        legMassMin = 10;
+        legMassMax = 100;
+
+        strengthAngleMin = 0;
+        strengthAngleMax = 180;
+
+        counterWeightMassMin = 50;
+        counterWeightMassMax = 200;
+
+        projectileMassMin = 1;
+        projectileMassMax = 100;
+
+        baseWidthMin = 5;
+        baseWidthMax = 40;
+
+        individualCount = 1000;
     }
 
     public double getAlphaAngleMin() {
