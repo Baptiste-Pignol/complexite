@@ -86,6 +86,8 @@ public class Individual {
             res += getTNTEnergie();
             this.value = res;
         }
+        if (this.value < 0)
+            this.value = 0;
         return this.value;
     }
 
@@ -124,6 +126,7 @@ public class Individual {
                 ", baseWidth=" + baseWidth +
                 ", portee=" + this.getPortee() +
                 ", value=" + value +
+                ", TNT=" + getTNTEnergie() +
                 '}';
     }
 }

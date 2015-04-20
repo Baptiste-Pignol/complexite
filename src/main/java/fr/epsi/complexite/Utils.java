@@ -19,7 +19,7 @@ public class Utils {
 
         List<Double> finalList = new ArrayList<Double>();
 
-        int mid = (int) (Math.random() * (firstList.size()));
+        int mid = (int) (Math.random() * (firstList.size()-1));
 
         for (int i = 0; i < firstList.size(); i++) {
             if (i < mid) {
