@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "homepage": "https://github.com/Baptiste-Pignol/complexite",
   "authors": [
-    "FXHibon <djxf44@gmail.com>"
+    "FXHibon <djxf44@gmail.com>",
+    "Baptiste-Pignol <...>"
   ],
   "license": "MIT",
   "ignore": [
