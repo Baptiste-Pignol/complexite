@@ -17,8 +17,7 @@ public class Individual {
      */
     private double alphaAngle, armLength, legMass, strengthAngle, counterWeightMass, projectileMass, baseWidth;
 
-    private double portee;
-    private double value;
+    private double value = -1;
 
     public Individual() {
     }
@@ -31,9 +30,6 @@ public class Individual {
         this.counterWeightMass = counterWeightMass;
         this.projectileMass = projectileMass;
         this.baseWidth = baseWidth;
-        this.value = -1;
-
-        this.portee = this.getPortee();
     }
 
     /**
@@ -81,11 +77,10 @@ public class Individual {
                 res = 1000;
             }
 
-            res -= Math.abs(GOAL - this.portee) * 100;
+            res -= Math.abs(GOAL - this.getPortee()) * 100;
             res += getEnergie();
             this.value = res;
         }
-
         return this.value;
     }
 
@@ -112,4 +107,18 @@ public class Individual {
         baseWidth = list.get(6);
     }
 
+    @Override
+    public String toString() {
+        return "Individual{" +
+                "alphaAngle=" + alphaAngle +
+                ", armLength=" + armLength +
+                ", legMass=" + legMass +
+                ", strengthAngle=" + strengthAngle +
+                ", counterWeightMass=" + counterWeightMass +
+                ", projectileMass=" + projectileMass +
+                ", baseWidth=" + baseWidth +
+                ", portee=" + this.getPortee() +
+                ", value=" + value +
+                '}';
+    }
 }
