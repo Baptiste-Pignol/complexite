@@ -17,15 +17,12 @@ public class App {
             sum += individual.evaluate();
         }
 
-        double tmpVal = Math.random() * sum;
-        double sum2 = 0;
-        Individual individual1;
-        selection(basicPopulation, tmpVal, sum2);
-
     }
 
-    private static void selection(Set<Individual> basicPopulation, double tmpVal, double sum2) {
-        Individual individual1;
+    private static Individual selection(Set<Individual> basicPopulation, double sum) {
+        double sum2 = 0;
+        double tmpVal = Math.random() * sum;
+        Individual individual1 = null;
         for (Individual individual : basicPopulation) {
             if (sum2 + individual.evaluate() > tmpVal) {
                 individual1 = individual;
@@ -34,5 +31,6 @@ public class App {
                 sum2 += individual.evaluate();
             }
         }
+        return individual1;
     }
 }
