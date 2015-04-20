@@ -38,7 +38,7 @@ public class Individual {
      */
 
     private double getForceTraction() {
-        return (this.counterWeightMass * GRAVITY) * Math.sin(this.strengthAngle) - (this.projectileMass * GRAVITY) * Math.cos(this.alphaAngle);
+        return (this.counterWeightMass * GRAVITY) * Math.sin(Math.toRadians(this.strengthAngle)) - (this.projectileMass * GRAVITY) * Math.cos(Math.toRadians(this.alphaAngle));
     }
 
     private double getMomentBras() {
@@ -58,12 +58,12 @@ public class Individual {
     }
 
     private double getPortee() {
-        return (Math.pow(this.getVelocite(), 2) / GRAVITY) * Math.sin(2 * (90 - this.alphaAngle));
+        return (Math.pow(this.getVelocite(), 2) / GRAVITY) * Math.sin(Math.toRadians(2 * (90 - this.alphaAngle)));
     }
 
     public boolean isViable() {
-        return Math.pow((Math.sin(this.alphaAngle) * armLength), 2) + Math.pow((Math.cos(this.alphaAngle) * armLength - baseWidth), 2)
-                * Math.sin(alphaAngle) * (projectileMass * GRAVITY) <= (baseWidth * (counterWeightMass * GRAVITY));
+        return Math.pow((Math.sin(Math.toRadians(this.alphaAngle)) * armLength), 2) + Math.pow((Math.cos(Math.toRadians(this.alphaAngle)) * armLength - baseWidth), 2)
+                * Math.sin(Math.toRadians(alphaAngle)) * (projectileMass * GRAVITY) <= (baseWidth * (counterWeightMass * GRAVITY));
     }
 
     private double getEnergie() {

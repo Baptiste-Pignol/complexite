@@ -5,63 +5,123 @@ package fr.epsi.complexite.bean;
  */
 public class Parameter {
 
-    private double alphaAngle, armLength, legMass, strengthAngle, counterWeightMass, projectileMass, baseWidth;
+    private double alphaAngleMin, armLengthMin, legMassMin, strengthAngleMin, counterWeightMassMin, projectileMassMin, baseWidthMin;
+    private double alphaAngleMax, armLengthMax, legMassMax, strengthAngleMax, counterWeightMassMax, projectileMassMax, baseWidthMax;
     private int individualCount;
 
-    public double getAlphaAngle() {
-        return alphaAngle;
+    public Parameter() {
     }
 
-    public void setAlphaAngle(double alphaAngle) {
-        this.alphaAngle = alphaAngle;
+    public double getAlphaAngleMin() {
+        return alphaAngleMin;
     }
 
-    public double getArmLength() {
-        return armLength;
+    public void setAlphaAngleMin(double alphaAngleMin) {
+        this.alphaAngleMin = alphaAngleMin;
     }
 
-    public void setArmLength(double armLength) {
-        this.armLength = armLength;
+    public double getArmLengthMin() {
+        return armLengthMin;
     }
 
-    public double getLegMass() {
-        return legMass;
+    public void setArmLengthMin(double armLengthMin) {
+        this.armLengthMin = armLengthMin;
     }
 
-    public void setLegMass(double legMass) {
-        this.legMass = legMass;
+    public double getLegMassMin() {
+        return legMassMin;
     }
 
-    public double getStrengthAngle() {
-        return strengthAngle;
+    public void setLegMassMin(double legMassMin) {
+        this.legMassMin = legMassMin;
     }
 
-    public void setStrengthAngle(double strengthAngle) {
-        this.strengthAngle = strengthAngle;
+    public double getStrengthAngleMin() {
+        return strengthAngleMin;
     }
 
-    public double getCounterWeightMass() {
-        return counterWeightMass;
+    public void setStrengthAngleMin(double strengthAngleMin) {
+        this.strengthAngleMin = strengthAngleMin;
     }
 
-    public void setCounterWeightMass(double counterWeightMass) {
-        this.counterWeightMass = counterWeightMass;
+    public double getCounterWeightMassMin() {
+        return counterWeightMassMin;
     }
 
-    public double getProjectileMass() {
-        return projectileMass;
+    public void setCounterWeightMassMin(double counterWeightMassMin) {
+        this.counterWeightMassMin = counterWeightMassMin;
     }
 
-    public void setProjectileMass(double projectileMass) {
-        this.projectileMass = projectileMass;
+    public double getProjectileMassMin() {
+        return projectileMassMin;
     }
 
-    public double getBaseWidth() {
-        return baseWidth;
+    public void setProjectileMassMin(double projectileMassMin) {
+        this.projectileMassMin = projectileMassMin;
     }
 
-    public void setBaseWidth(double baseWidth) {
-        this.baseWidth = baseWidth;
+    public double getBaseWidthMin() {
+        return baseWidthMin;
+    }
+
+    public void setBaseWidthMin(double baseWidthMin) {
+        this.baseWidthMin = baseWidthMin;
+    }
+
+    public double getAlphaAngleMax() {
+        return alphaAngleMax;
+    }
+
+    public void setAlphaAngleMax(double alphaAngleMax) {
+        this.alphaAngleMax = alphaAngleMax;
+    }
+
+    public double getArmLengthMax() {
+        return armLengthMax;
+    }
+
+    public void setArmLengthMax(double armLengthMax) {
+        this.armLengthMax = armLengthMax;
+    }
+
+    public double getLegMassMax() {
+        return legMassMax;
+    }
+
+    public void setLegMassMax(double legMassMax) {
+        this.legMassMax = legMassMax;
+    }
+
+    public double getStrengthAngleMax() {
+        return strengthAngleMax;
+    }
+
+    public void setStrengthAngleMax(double strengthAngleMax) {
+        this.strengthAngleMax = strengthAngleMax;
+    }
+
+    public double getCounterWeightMassMax() {
+        return counterWeightMassMax;
+    }
+
+    public void setCounterWeightMassMax(double counterWeightMassMax) {
+        this.counterWeightMassMax = counterWeightMassMax;
+    }
+
+    public double getProjectileMassMax() {
+        return projectileMassMax;
+    }
+
+    public void setProjectileMassMax(double projectileMassMax) {
+        this.projectileMassMax = projectileMassMax;
+    }
+
+    public double getBaseWidthMax() {
+        return baseWidthMax;
+    }
+
+    public void setBaseWidthMax(double baseWidthMax) {
+        this.baseWidthMax = baseWidthMax;
     }
 
     public int getIndividualCount() {
@@ -72,3 +132,4 @@ public class Parameter {
         this.individualCount = individualCount;
     }
 }
+

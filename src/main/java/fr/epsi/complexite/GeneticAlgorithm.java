@@ -1,5 +1,7 @@
 package fr.epsi.complexite;
 
+import fr.epsi.complexite.bean.Parameter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,20 +15,20 @@ public class GeneticAlgorithm {
     /**
      * Init
      */
-    public GeneticAlgorithm() {
+    public GeneticAlgorithm(Parameter parameter) {
 
         population = new ArrayList<Individual>();
 
         for (int val = 0; val < 1000; val++) {
             // TODO Generify params
             population.add(new Individual(
-                    Math.random() * 180,
-                    Math.random() * 30 + 0.5,
-                    Math.random() * 100 + 10,
-                    Math.random() * 180,
-                    Math.random() * 200 + 50,
-                    Math.random() * 100 + 1,
-                    Math.random() * 40 + 5
+                    Math.random() * parameter.getAlphaAngleMax() + parameter.getAlphaAngleMin(),
+                    Math.random() * parameter.getArmLengthMax() + parameter.getArmLengthMin(),
+                    Math.random() * parameter.getLegMassMax() + parameter.getLegMassMin(),
+                    Math.random() * parameter.getStrengthAngleMax() + parameter.getStrengthAngleMin(),
+                    Math.random() * parameter.getCounterWeightMassMax() + parameter.getCounterWeightMassMin(),
+                    Math.random() * parameter.getProjectileMassMax() + parameter.getProjectileMassMin(),
+                    Math.random() * parameter.getBaseWidthMax() + parameter.getBaseWidthMin()
             ));
         }
     }
