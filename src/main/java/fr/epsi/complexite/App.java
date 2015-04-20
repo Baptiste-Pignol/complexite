@@ -12,7 +12,7 @@ public class App {
 
         Set<Individual> population = new HashSet<Individual>();
 
-        for (int val = 0; val < 1000000; val++) {
+        for (int val = 0; val < 10000; val++) {
             population.add(new Individual(
                     Math.random() * 180,
                     Math.random() * 30 + 0.5,

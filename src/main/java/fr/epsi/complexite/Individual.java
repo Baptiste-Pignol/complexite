@@ -79,7 +79,7 @@ public class Individual {
         if (this.value == -1) {
             double res = 0.;
             if (isViable()) {
-                res = 1000;
+                res = 10000;
             }
 
             res -= Math.abs(GOAL - this.getPortee()) * 100;
@@ -117,15 +117,8 @@ public class Individual {
     @Override
     public String toString() {
         return "Individual{" +
-                "alphaAngle=" + alphaAngle +
-                ", armLength=" + armLength +
-                ", legMass=" + legMass +
-                ", strengthAngle=" + strengthAngle +
-                ", counterWeightMass=" + counterWeightMass +
-                ", projectileMass=" + projectileMass +
-                ", baseWidth=" + baseWidth +
+                "isViable=" + this.isViable() +
                 ", portee=" + this.getPortee() +
-                ", value=" + value +
                 ", TNT=" + getTNTEnergie() +
                 '}';
     }
