@@ -57,7 +57,7 @@ public class Individual {
         return getAccelerationAngulaire() * armLength;
     }
 
-    private double getPortee() {
+    public double getPortee() {
         return (Math.pow(this.getVelocite(), 2) / GRAVITY) * Math.sin(Math.toRadians(2 * (90 - this.alphaAngle)));
     }
 
@@ -122,4 +122,7 @@ public class Individual {
                 ", TNT=" + getTNTEnergie() +
                 '}';
     }
+
+
+
 }

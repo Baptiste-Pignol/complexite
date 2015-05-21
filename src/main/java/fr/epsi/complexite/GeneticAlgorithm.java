@@ -76,6 +76,7 @@ public class GeneticAlgorithm {
         }
 
         double max = 0;
+        double min = 99999999999.;
 
         for (int count = 0; count < basicPopulation.size() / 2; count++) {
             Individual[] selection = selection(basicPopulation, sum);
@@ -85,6 +86,10 @@ public class GeneticAlgorithm {
                 finalPopulation.add(0, crossing);
             } else {
                 finalPopulation.add(crossing);
+            }
+
+            if (crossing.evaluate() < min) {
+                min = crossing.evaluate();
             }
         }
         return finalPopulation;
@@ -128,6 +133,8 @@ public class GeneticAlgorithm {
             return null;
         }
         population = this.iterate(population);
+        System.out.println(new Statistics(population).getVariance());
+//        System.out.println(population);
         return population.get(0);
     }
 }
